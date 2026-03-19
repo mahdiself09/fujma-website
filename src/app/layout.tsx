@@ -9,6 +9,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/favicon.svg",
+  },
   title: "Product Sourcing China | Build Brand from China | Fujma Limited",
   description:
     "Leading China sourcing agency helping entrepreneurs build brands from China. Expert product sourcing China services, Hong Kong company formation, and China import export services. Launch your brand with confidence.",
