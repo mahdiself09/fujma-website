@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -56,12 +57,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3.5">
               <li>
-                <a
-                  href="#services"
+                <Link
+                  href="/sourcing"
                   className="text-[14px] hover:text-white transition-colors duration-200"
                 >
                   Sourcing
-                </a>
+                </Link>
               </li>
               <li>
                 <a
