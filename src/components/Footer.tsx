@@ -40,7 +40,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#contact"
+                  href="/contact-us"
                   className="text-[14px] hover:text-white transition-colors duration-200"
                 >
                   Contact
@@ -98,7 +98,7 @@ export default function Footer() {
             <ul className="space-y-3.5">
               <li>
                 <a
-                  href="#"
+                  href="/privacy-policy"
                   className="text-[14px] hover:text-white transition-colors duration-200"
                 >
                   Privacy Policy
@@ -106,7 +106,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/terms-of-service"
                   className="text-[14px] hover:text-white transition-colors duration-200"
                 >
                   Terms of Service
@@ -114,10 +114,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/disclaimer"
                   className="text-[14px] hover:text-white transition-colors duration-200"
                 >
-                  Refund Policy
+                  Disclaimer
                 </a>
               </li>
             </ul>

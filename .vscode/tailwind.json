@@ -1,0 +1,25 @@
+{
+  "version": 1.1,
+  "atDirectives": [
+    {
+      "name": "@theme",
+      "description": "Tailwind CSS v4 — defines design tokens as CSS custom properties."
+    },
+    {
+      "name": "@tailwind",
+      "description": "Tailwind CSS directive."
+    },
+    {
+      "name": "@layer",
+      "description": "Tailwind CSS layer directive."
+    },
+    {
+      "name": "@apply",
+      "description": "Tailwind CSS apply directive."
+    },
+    {
+      "name": "@config",
+      "description": "Tailwind CSS v4 — points to a JavaScript config file."
+    }
+  ]
+}

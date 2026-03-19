@@ -10,7 +10,7 @@ const navLinks = [
   { label: "How It Works", href: "#how-it-works" },
   { label: "About", href: "#why-fujma" },
   { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact-us" },
 ];
 
 export default function Header() {

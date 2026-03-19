@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@config "../../tailwind.config.js";
 
 :root {
   --royal-blue: #2563eb;
@@ -10,19 +11,6 @@
   --muted: #64748b;
   --border: #e2e8f0;
   --section-spacing: clamp(5rem, 8vw, 7.5rem);
-}
-
-@theme inline {
-  --color-royal: var(--royal-blue);
-  --color-royal-dark: var(--royal-blue-dark);
-  --color-royal-light: var(--royal-blue-light);
-  --color-gold: var(--gold);
-  --color-gold-light: var(--gold-light);
-  --color-foreground: var(--foreground);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 *,
