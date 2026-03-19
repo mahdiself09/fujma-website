@@ -10,7 +10,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   icons: {
-    icon: "/favicon.svg",
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
   },
   title: "Product Sourcing China | Build Brand from China | Fujma Limited",
   description:
