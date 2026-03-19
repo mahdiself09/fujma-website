@@ -3,9 +3,10 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const navLinks = [
-  { label: "Home", href: "#" },
+  { label: "Home", href: "/" },
   { label: "Services", href: "#services" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "About", href: "#why-fujma" },
@@ -21,20 +22,20 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-[72px]">
           {/* Logo */}
-          <a href="#" className="flex items-center">
+          <Link href="/" className="flex items-center">
             <Image src="/logo.png" alt="Fujma" width={120} height={38} priority />
-          </a>
+          </Link>
 
           {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 className="text-sm font-medium text-gray-600 hover:text-royal transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -64,14 +65,14 @@ export default function Header() {
         <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg">
           <div className="px-4 py-4 space-y-1">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
                 className="block px-3 py-2.5 text-sm font-medium text-gray-700 hover:text-royal hover:bg-royal-light rounded-lg transition-colors"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <div className="pt-3">
               <a
