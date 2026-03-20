@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight, CalendarDays, ShieldCheck, Factory, Globe } from "lucide-react";
 
 const trustBadges = [
@@ -21,8 +22,8 @@ export default function InlineCTA({ variant = "light" }: InlineCTAProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5">
-          <a
-            href="#services"
+          <Link
+            href="/branding"
             className="btn-primary btn-primary-gold group"
           >
             Start Your Brand
@@ -30,7 +31,7 @@ export default function InlineCTA({ variant = "light" }: InlineCTAProps) {
               size={18}
               className="transition-transform duration-300 group-hover:translate-x-0.5"
             />
-          </a>
+          </Link>
           <a
             href="#contact"
             className={`btn-primary group ${

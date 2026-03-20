@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { ArrowRight, CalendarDays, ShieldCheck, Factory, Globe } from "lucide-react";
 
 const trustBadges = [
@@ -54,14 +55,14 @@ export default function Hero() {
 
           {/* Buttons */}
           <div className="animate-fade-in-up-delay-3 flex flex-col sm:flex-row gap-4">
-            <a
-              href="#services"
+            <Link
+              href="/branding"
               className="btn-primary btn-primary-gold group"
               aria-label="Start building your brand from China"
             >
               Start Your Brand
               <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
-            </a>
+            </Link>
             <a
               href="#contact"
               className="btn-primary group bg-white/[0.07] backdrop-blur-md text-white border border-white/[0.15] hover:bg-white/[0.12] hover:border-white/[0.25]"

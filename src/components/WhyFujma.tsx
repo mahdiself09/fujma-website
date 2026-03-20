@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   MapPin,
   Users,
@@ -57,13 +58,13 @@ export default function WhyFujma() {
               As a leading China sourcing agency, we combine local expertise in product sourcing China 
               with global business experience to help you build your brand from China successfully.
             </p>
-            <a
-              href="#contact"
+            <Link
+              href="/sourcing"
               className="btn-primary btn-primary-royal group"
             >
               Get Started Today
               <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5" />
-            </a>
+            </Link>
           </div>
 
           {/* Right - Points */}

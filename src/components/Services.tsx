@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   Lightbulb,
   Search,
@@ -16,6 +17,7 @@ const services = [
       "Build your brand from China with our complete brand creation services from concept to market launch.",
     iconBg: "bg-blue-50",
     iconColor: "text-blue-600",
+    href: "/branding",
   },
   {
     icon: Search,
@@ -24,6 +26,7 @@ const services = [
       "Expert product sourcing China services. We find verified factories, negotiate pricing and ensure quality.",
     iconBg: "bg-amber-50",
     iconColor: "text-amber-600",
+    href: "/sourcing",
   },
   {
     icon: Ship,
@@ -32,6 +35,7 @@ const services = [
       "Comprehensive China import export services including inspection, documentation and worldwide shipping.",
     iconBg: "bg-emerald-50",
     iconColor: "text-emerald-600",
+    href: "/import-export",
   },
   {
     icon: Building,
@@ -40,6 +44,7 @@ const services = [
       "Professional Hong Kong company formation services for entrepreneurs building international businesses.",
     iconBg: "bg-violet-50",
     iconColor: "text-violet-600",
+    href: "/hong-kong-company",
   },
   {
     icon: ShieldCheck,
@@ -48,6 +53,7 @@ const services = [
       "Trademark registration in Hong Kong to legally protect your brand and intellectual property.",
     iconBg: "bg-rose-50",
     iconColor: "text-rose-600",
+    href: "/trademark",
   },
   {
     icon: TrendingUp,
@@ -56,6 +62,7 @@ const services = [
       "Strategic consulting to help you grow your e-commerce or product business. We analyze your sourcing strategy, branding, logistics, and sales to help you scale faster and avoid costly mistakes.",
     iconBg: "bg-indigo-50",
     iconColor: "text-indigo-600",
+    href: undefined,
   },
 ];
 
@@ -97,9 +104,18 @@ export default function Services() {
                 <p className="text-muted text-[14px] leading-[1.7] mb-5 flex-1">
                   {service.description}
                 </p>
-                <div className="mt-auto flex items-center gap-1.5 text-sm font-semibold text-royal opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0.5">
-                  Learn more <ArrowRight size={14} />
-                </div>
+                {service.href ? (
+                  <Link
+                    href={service.href}
+                    className="mt-auto flex items-center gap-1.5 text-sm font-semibold text-royal opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0.5"
+                  >
+                    Learn more <ArrowRight size={14} />
+                  </Link>
+                ) : (
+                  <div className="mt-auto flex items-center gap-1.5 text-sm font-semibold text-royal opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-0.5">
+                    Learn more <ArrowRight size={14} />
+                  </div>
+                )}
               </div>
             );
           })}

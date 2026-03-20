@@ -1,6 +1,5 @@
-"use client";
-
 import { Mail, MapPin, Phone } from "lucide-react";
+import ContactForm from "@/components/forms/ContactForm";
 
 export default function Contact() {
   return (
@@ -8,7 +7,7 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
           {/* Left */}
-          <div>
+          <div className="md:sticky md:top-24 self-start">
             <span className="inline-block text-xs font-semibold text-royal uppercase tracking-widest mb-4">
               Contact Us
             </span>
@@ -61,72 +60,8 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right - Form */}
-          <div className="bg-slate-50 rounded-2xl p-8 sm:p-10 border border-gray-100">
-            <form className="space-y-5" aria-label="Contact form for China sourcing services">
-              <div className="grid sm:grid-cols-2 gap-5">
-                <div>
-                  <label className="block text-[13px] font-semibold text-foreground mb-2">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="John"
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-royal/20 focus:border-royal transition-all duration-200"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[13px] font-semibold text-foreground mb-2">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    placeholder="Doe"
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-royal/20 focus:border-royal transition-all duration-200"
-                  />
-                </div>
-              </div>
-              <div>
-                <label className="block text-[13px] font-semibold text-foreground mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="john@example.com"
-                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-royal/20 focus:border-royal transition-all duration-200"
-                />
-              </div>
-              <div>
-                <label className="block text-[13px] font-semibold text-foreground mb-2">
-                  What are you interested in?
-                </label>
-                <select className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm text-muted focus:outline-none focus:ring-2 focus:ring-royal/20 focus:border-royal transition-all duration-200">
-                  <option>Product Sourcing</option>
-                  <option>Brand Creation</option>
-                  <option>Import & Export</option>
-                  <option>Hong Kong Company Formation</option>
-                  <option>Trademark Registration</option>
-                  <option>Other</option>
-                </select>
-              </div>
-              <div>
-                <label className="block text-[13px] font-semibold text-foreground mb-2">
-                  Message
-                </label>
-                <textarea
-                  rows={4}
-                  placeholder="Tell us about your project..."
-                  className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-royal/20 focus:border-royal transition-all duration-200 resize-none"
-                />
-              </div>
-              <button
-                type="submit"
-                className="btn-primary btn-primary-royal w-full"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
+          {/* Right — Reusable form */}
+          <ContactForm />
         </div>
       </div>
     </section>
