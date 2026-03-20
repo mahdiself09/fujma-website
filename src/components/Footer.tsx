@@ -24,12 +24,12 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3.5">
               <li>
-                <a
-                  href="#why-fujma"
+                <Link
+                  href="/about"
                   className="text-[14px] hover:text-white transition-colors duration-200"
                 >
                   About
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
