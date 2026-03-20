@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "#services" },
+  { label: "Services", href: "/services" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "About", href: "#why-fujma" },
   { label: "FAQ", href: "#faq" },

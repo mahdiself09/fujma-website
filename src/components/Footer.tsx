@@ -32,12 +32,12 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a
-                  href="#services"
+                <Link
+                  href="/services"
                   className="text-[14px] hover:text-white transition-colors duration-200"
                 >
                   Services
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -65,28 +65,28 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#services"
+                <Link
+                  href="/import-export"
                   className="text-[14px] hover:text-white transition-colors duration-200"
                 >
                   Import Export
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#services"
+                <Link
+                  href="/hong-kong-company"
                   className="text-[14px] hover:text-white transition-colors duration-200"
                 >
                   Hong Kong Company
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#services"
+                <Link
+                  href="/trademark"
                   className="text-[14px] hover:text-white transition-colors duration-200"
                 >
                   Trademark
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
