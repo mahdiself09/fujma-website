@@ -47,7 +47,7 @@ export default function PrivacyPolicyPage() {
             <div className="mt-6 flex flex-wrap justify-center gap-6 text-sm text-muted">
               <span><strong className="text-foreground">Version:</strong> 3.0 — Final</span>
               <span><strong className="text-foreground">Effective:</strong> 20 March 2026</span>
-              <span><strong className="text-foreground">Contact:</strong> legal@fujma.com</span>
+              <span><strong className="text-foreground">Contact:</strong> contact@fujma.com</span>
             </div>
           </div>
         </section>
@@ -155,7 +155,7 @@ export default function PrivacyPolicyPage() {
               <p className="mb-4">You may withdraw consent or opt out of marketing communications at any time by:</p>
               <ul className="list-disc pl-6 space-y-1 mb-4">
                 <li>Clicking the unsubscribe link included in any marketing email</li>
-                <li>Sending a written opt-out request to: legal@fujma.com</li>
+                <li>Sending a written opt-out request to: contact@fujma.com</li>
               </ul>
               <p>Opt-out requests will be processed within five (5) business days of receipt. Withdrawal of marketing consent does not affect the lawfulness of processing that occurred prior to withdrawal, and does not prevent Fujma Limited from sending transactional or service-operational communications that are necessary for the performance of an active engagement.</p>
             </section>
@@ -195,7 +195,7 @@ export default function PrivacyPolicyPage() {
                 <li><strong>Right to Object:</strong> To object to processing carried out on the basis of legitimate interests or for direct marketing purposes</li>
                 <li><strong>Right to Withdraw Consent:</strong> Where processing is based on consent, to withdraw that consent at any time without affecting the lawfulness of prior processing</li>
               </ul>
-              <p>To exercise any of these rights, submit a written request to: <a href="mailto:legal@fujma.com" className="text-royal hover:underline">legal@fujma.com</a>. We will respond within thirty (30) calendar days. Where requests are complex or numerous, we may extend this period by a further two months upon prior written notification. You also retain the right to lodge a complaint with the relevant supervisory authority in your jurisdiction.</p>
+              <p>To exercise any of these rights, submit a written request to: <a href="mailto:contact@fujma.com" className="text-royal hover:underline">contact@fujma.com</a>. We will respond within thirty (30) calendar days. Where requests are complex or numerous, we may extend this period by a further two months upon prior written notification. You also retain the right to lodge a complaint with the relevant supervisory authority in your jurisdiction.</p>
             </section>
 
             {/* 10 */}
@@ -226,7 +226,7 @@ export default function PrivacyPolicyPage() {
             {/* 14 */}
             <section id="children">
               <h2 className="text-2xl font-bold text-foreground mb-4">14. Children's Privacy</h2>
-              <p>Our services are directed exclusively at adults and business entities. We do not knowingly collect personal data from individuals under the age of eighteen (18). If we become aware that personal data has been inadvertently collected from a minor, we will take prompt steps to delete such data. If you believe we hold data relating to a minor, please contact us immediately at <a href="mailto:legal@fujma.com" className="text-royal hover:underline">legal@fujma.com</a>.</p>
+              <p>Our services are directed exclusively at adults and business entities. We do not knowingly collect personal data from individuals under the age of eighteen (18). If we become aware that personal data has been inadvertently collected from a minor, we will take prompt steps to delete such data. If you believe we hold data relating to a minor, please contact us immediately at <a href="mailto:contact@fujma.com" className="text-royal hover:underline">contact@fujma.com</a>.</p>
             </section>
 
             {/* 15 */}
@@ -245,8 +245,8 @@ export default function PrivacyPolicyPage() {
                 <p>35 Tai Yau Street, San Po Kong, Hong Kong</p>
                 <p className="mt-2">
                   Email:{" "}
-                  <a href="mailto:legal@fujma.com" className="text-royal hover:underline">
-                    legal@fujma.com
+                  <a href="mailto:contact@fujma.com" className="text-royal hover:underline">
+                    contact@fujma.com
                   </a>
                 </p>
               </div>

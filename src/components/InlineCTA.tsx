@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, CalendarDays, ShieldCheck, Factory, Globe } from "lucide-react";
+import CalendlyButton from "@/components/CalendlyButton";
 
 const trustBadges = [
   { icon: ShieldCheck, text: "No middlemen" },
@@ -32,8 +33,7 @@ export default function InlineCTA({ variant = "light" }: InlineCTAProps) {
               className="transition-transform duration-300 group-hover:translate-x-0.5"
             />
           </Link>
-          <a
-            href="#contact"
+          <CalendlyButton
             className={`btn-primary group ${
               isLight
                 ? "btn-primary-royal"
@@ -42,7 +42,7 @@ export default function InlineCTA({ variant = "light" }: InlineCTAProps) {
           >
             <CalendarDays size={18} />
             Book Free Consultation
-          </a>
+          </CalendlyButton>
         </div>
 
         {/* Micro trust badges */}

@@ -183,8 +183,8 @@ export default function DisclaimerPage() {
                 <p>35 Tai Yau Street, San Po Kong, Hong Kong</p>
                 <p className="mt-2">
                   Email:{" "}
-                  <a href="mailto:legal@fujma.com" className="text-royal hover:underline">
-                    legal@fujma.com
+                  <a href="mailto:contact@fujma.com" className="text-royal hover:underline">
+                    contact@fujma.com
                   </a>
                 </p>
               </div>

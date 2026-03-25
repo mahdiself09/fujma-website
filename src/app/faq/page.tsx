@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CalendlyButton from "@/components/CalendlyButton";
 
 const faqs = [
   {
@@ -155,10 +156,7 @@ export default function FAQPage() {
               send us a message — no commitment required.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <Link
-                href="/contact-us"
-                className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors duration-150 hover:bg-blue-700"
-              >
+              <CalendlyButton className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white shadow-sm transition-colors duration-150 hover:bg-blue-700">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -176,7 +174,7 @@ export default function FAQPage() {
                   <line x1="3" x2="21" y1="10" y2="10" />
                 </svg>
                 Book a Consultation
-              </Link>
+              </CalendlyButton>
               <Link
                 href="/contact-us"
                 className="inline-flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-6 py-3 text-base font-semibold text-gray-700 shadow-sm transition-colors duration-150 hover:bg-gray-50"

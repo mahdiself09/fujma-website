@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import CalendlyButton from "@/components/CalendlyButton";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -41,12 +42,9 @@ export default function Header() {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center">
-            <a
-              href="#contact"
-              className="inline-flex items-center justify-center px-5 py-2.5 bg-royal text-white text-sm font-semibold rounded-lg hover:bg-royal-dark transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-royal/15"
-            >
+            <CalendlyButton className="inline-flex items-center justify-center px-5 py-2.5 bg-royal text-white text-sm font-semibold rounded-lg hover:bg-royal-dark transition-all duration-300 shadow-sm hover:shadow-md hover:shadow-royal/15">
               Book Consultation
-            </a>
+            </CalendlyButton>
           </div>
 
           {/* Mobile toggle */}
@@ -75,13 +73,9 @@ export default function Header() {
               </Link>
             ))}
             <div className="pt-3">
-              <a
-                href="#contact"
-                onClick={() => setMobileOpen(false)}
-                className="block w-full text-center px-5 py-2.5 bg-royal text-white text-sm font-semibold rounded-lg hover:bg-royal-dark transition-all duration-300"
-              >
+              <CalendlyButton className="block w-full text-center px-5 py-2.5 bg-royal text-white text-sm font-semibold rounded-lg hover:bg-royal-dark transition-all duration-300">
                 Book Consultation
-              </a>
+              </CalendlyButton>
             </div>
           </div>
         </div>

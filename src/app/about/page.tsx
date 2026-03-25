@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CalendlyButton from "@/components/CalendlyButton";
 
 export const metadata: Metadata = {
   title: "About Us | Fujma Limited",
@@ -135,13 +136,10 @@ export default function AboutPage() {
             </p>
 
             <div className="mt-10 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <Link
-                href="/contact-us"
-                className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-7 py-3.5 text-[15px] font-semibold text-white shadow-lg shadow-blue-600/20 transition-all hover:bg-blue-700 hover:-translate-y-px"
-              >
+              <CalendlyButton className="inline-flex items-center gap-2 rounded-xl bg-blue-600 px-7 py-3.5 text-[15px] font-semibold text-white shadow-lg shadow-blue-600/20 transition-all hover:bg-blue-700 hover:-translate-y-px">
                 Book a Consultation
                 <ArrowRightIcon className="w-4 h-4" />
-              </Link>
+              </CalendlyButton>
               <Link
                 href="/services"
                 className="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-7 py-3.5 text-[15px] font-semibold text-gray-700 shadow-sm transition-all hover:border-gray-300 hover:bg-gray-50"
@@ -459,13 +457,10 @@ export default function AboutPage() {
                 </p>
 
                 <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                  <Link
-                    href="/contact-us"
-                    className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl bg-blue-600 px-8 py-4 text-[15px] font-bold text-white shadow-xl shadow-blue-600/25 transition-all hover:bg-blue-700 hover:-translate-y-px"
-                  >
+                  <CalendlyButton className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl bg-blue-600 px-8 py-4 text-[15px] font-bold text-white shadow-xl shadow-blue-600/25 transition-all hover:bg-blue-700 hover:-translate-y-px">
                     Book a Consultation
                     <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
-                  </Link>
+                  </CalendlyButton>
                   <Link
                     href="/contact-us"
                     className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-[15px] font-semibold text-white transition-all hover:bg-white/10 hover:border-white/20"

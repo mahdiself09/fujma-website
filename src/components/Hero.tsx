@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, CalendarDays, ShieldCheck, Factory, Globe } from "lucide-react";
+import CalendlyButton from "@/components/CalendlyButton";
 
 const trustBadges = [
   { icon: ShieldCheck, text: "No middlemen" },
@@ -63,14 +64,10 @@ export default function Hero() {
               Start Your Brand
               <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
             </Link>
-            <a
-              href="#contact"
-              className="btn-primary group bg-white/[0.07] backdrop-blur-md text-white border border-white/[0.15] hover:bg-white/[0.12] hover:border-white/[0.25]"
-              aria-label="Book free consultation for China sourcing services"
-            >
+            <CalendlyButton className="btn-primary group bg-white/[0.07] backdrop-blur-md text-white border border-white/[0.15] hover:bg-white/[0.12] hover:border-white/[0.25]">
               <CalendarDays size={18} />
               Book Free Consultation
-            </a>
+            </CalendlyButton>
           </div>
 
           {/* Micro trust badges */}

@@ -1,4 +1,5 @@
 import { ArrowRight } from "lucide-react";
+import CalendlyButton from "@/components/CalendlyButton";
 
 export default function CTA() {
   return (
@@ -22,13 +23,10 @@ export default function CTA() {
               Book a free consultation with our team and let&apos;s discuss how we
               can help you build a successful product brand from China.
             </p>
-            <a
-              href="#contact"
-              className="btn-primary btn-primary-gold group"
-            >
+            <CalendlyButton className="btn-primary btn-primary-gold group">
               Book a Free Consultation
               <ArrowRight size={18} className="transition-transform duration-300 group-hover:translate-x-0.5" />
-            </a>
+            </CalendlyButton>
           </div>
         </div>
       </div>

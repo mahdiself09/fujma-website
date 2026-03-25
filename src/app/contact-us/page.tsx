@@ -1,4 +1,5 @@
 import { ArrowRight, Mail, Phone, MapPin, Clock, CheckCircle } from "lucide-react";
+import CalendlyButton from "@/components/CalendlyButton";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/forms/ContactForm";
@@ -212,13 +213,13 @@ export default function ContactPage() {
                 <p className="text-amber-400/80 text-sm font-medium mb-10">
                   We only onboard a limited number of brands each month.
                 </p>
-                <a href="mailto:contact@fujma.com" className="btn-primary btn-primary-gold group">
+                <CalendlyButton className="btn-primary btn-primary-gold group">
                   Book Free Consultation
                   <ArrowRight
                     size={18}
                     className="transition-transform duration-300 group-hover:translate-x-0.5"
                   />
-                </a>
+                </CalendlyButton>
               </div>
             </div>
           </div>

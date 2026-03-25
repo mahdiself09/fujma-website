@@ -62,7 +62,7 @@ const services = [
       "Strategic consulting to help you grow your e-commerce or product business. We analyze your sourcing strategy, branding, logistics, and sales to help you scale faster and avoid costly mistakes.",
     iconBg: "bg-indigo-50",
     iconColor: "text-indigo-600",
-    href: undefined,
+    href: "/consultation",
   },
 ];
 

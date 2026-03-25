@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CalendlyButton from "@/components/CalendlyButton";
 
 export const metadata: Metadata = {
   title: "How It Works | Fujma Limited",
@@ -458,12 +459,9 @@ export default function HowItWorksPage() {
                     Start Your Project
                     <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                   </Link>
-                  <Link
-                    href="/contact-us"
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-[15px] font-semibold text-white transition-all hover:bg-white/10 hover:border-white/20"
-                  >
+                  <CalendlyButton className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-[15px] font-semibold text-white transition-all hover:bg-white/10 hover:border-white/20">
                     Book a Consultation
-                  </Link>
+                  </CalendlyButton>
                 </div>
 
                 <p className="mt-6 text-sm text-gray-600">

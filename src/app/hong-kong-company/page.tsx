@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CalendlyButton from "@/components/CalendlyButton";
 
 export const metadata: Metadata = {
   title: "Hong Kong Company Formation | Fujma — Register in 3 Days",
@@ -74,12 +75,9 @@ function Hero() {
             >
               Register My Hong Kong Company
             </a>
-            <a
-              href="/contact-us"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 text-white font-medium rounded-xl transition-all duration-200 text-base"
-            >
+            <CalendlyButton className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 text-white font-medium rounded-xl transition-all duration-200 text-base">
               Book Free Consultation
-            </a>
+            </CalendlyButton>
           </div>
 
           <p className="mt-4 text-sm text-slate-500">
@@ -859,12 +857,9 @@ function FinalCTA() {
           >
             Register My Hong Kong Company
           </a>
-          <a
-            href="/contact-us"
-            className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-9 py-4 text-base font-semibold text-white transition-all hover:bg-white/10 hover:border-white/20"
-          >
+          <CalendlyButton className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-9 py-4 text-base font-semibold text-white transition-all hover:bg-white/10 hover:border-white/20">
             Book Free Consultation
-          </a>
+          </CalendlyButton>
         </div>
 
         <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-slate-500">

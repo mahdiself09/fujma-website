@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CalendlyButton from "@/components/CalendlyButton";
 
 export const metadata: Metadata = {
   title: "Build & Launch Your Brand from China | Fujma Limited",
@@ -155,12 +156,9 @@ export default function BrandingPage() {
                 Start Your Brand
                 <ArrowRightIcon className="w-4 h-4" />
               </Link>
-              <Link
-                href="/contact-us"
-                className="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-7 py-3.5 text-[15px] font-semibold text-gray-700 shadow-sm transition-all hover:border-gray-300 hover:bg-gray-50"
-              >
+              <CalendlyButton className="inline-flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-7 py-3.5 text-[15px] font-semibold text-gray-700 shadow-sm transition-all hover:border-gray-300 hover:bg-gray-50">
                 Book Consultation
-              </Link>
+              </CalendlyButton>
             </div>
 
             <p className="mt-5 text-sm text-gray-400">
@@ -314,9 +312,9 @@ export default function BrandingPage() {
                     Start Your Brand
                     <ArrowRightIcon className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
                   </Link>
-                  <Link href="/contact-us" className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-[15px] font-semibold text-white transition-all hover:bg-white/10 hover:border-white/20">
+                  <CalendlyButton className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 rounded-xl border border-white/10 bg-white/5 px-8 py-4 text-[15px] font-semibold text-white transition-all hover:bg-white/10 hover:border-white/20">
                     Book Consultation
-                  </Link>
+                  </CalendlyButton>
                 </div>
                 <p className="mt-6 text-sm text-gray-600">Free review &middot; No commitment &middot; Response within 24 hours</p>
               </div>

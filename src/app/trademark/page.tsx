@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import CalendlyButton from "@/components/CalendlyButton";
 
 export const metadata: Metadata = {
   title: "Trademark Registration Hong Kong & International | Fujma",
@@ -796,12 +797,9 @@ export default function TrademarkPage() {
                 Protect My Brand Now
                 <Icon.Arrow />
               </a>
-              <a
-                href="/contact-us"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-9 py-4 text-base font-semibold text-white transition hover:bg-white/10 hover:border-white/20"
-              >
+              <CalendlyButton className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-white/5 px-9 py-4 text-base font-semibold text-white transition hover:bg-white/10 hover:border-white/20">
                 Book Free Consultation
-              </a>
+              </CalendlyButton>
             </div>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-slate-500">

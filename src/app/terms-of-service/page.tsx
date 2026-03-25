@@ -203,7 +203,7 @@ export default function TermsOfServicePage() {
               <h3 className="text-lg font-semibold text-royal mb-2">8.3 Prohibited Chargebacks and Dispute Protocol</h3>
               <p className="mb-3">The Client agrees that initiating a chargeback, payment reversal, or dispute without first completing the mandatory dispute resolution procedure constitutes a material breach of these Terms. Prior to initiating any payment dispute, the Client must:</p>
               <ul className="list-disc pl-6 space-y-1 mb-4">
-                <li>Submit a written complaint to legal@fujma.com specifying the nature of the dispute in reasonable detail</li>
+                <li>Submit a written complaint to contact@fujma.com specifying the nature of the dispute in reasonable detail</li>
                 <li>Allow Fujma Limited a period of fourteen (14) calendar days to investigate and respond</li>
                 <li>Engage in good-faith negotiation for a further period of fourteen (14) calendar days following Fujma Limited's response</li>
               </ul>
@@ -228,7 +228,7 @@ export default function TermsOfServicePage() {
               </div>
               <p className="mb-4">Where the Client wishes to cancel an engagement, the following conditions apply:</p>
               <ul className="list-disc pl-6 space-y-1">
-                <li>Written notice of cancellation must be delivered to legal@fujma.com</li>
+                <li>Written notice of cancellation must be delivered to contact@fujma.com</li>
                 <li>All service fees, third-party costs, and disbursements incurred or committed to the date of cancellation remain due and payable in full</li>
                 <li>Upfront deposits are non-refundable in all circumstances, unless expressly stated to the contrary in a signed Agreement</li>
                 <li>Where work has not yet commenced and no third-party commitments have been entered into, Fujma Limited may, at its sole discretion, offer a partial service credit applicable to future engagements</li>
@@ -349,8 +349,8 @@ export default function TermsOfServicePage() {
                 <p>35 Tai Yau Street, San Po Kong, Hong Kong</p>
                 <p className="mt-2">
                   Email:{" "}
-                  <a href="mailto:legal@fujma.com" className="text-royal hover:underline">
-                    legal@fujma.com
+                  <a href="mailto:contact@fujma.com" className="text-royal hover:underline">
+                    contact@fujma.com
                   </a>
                 </p>
               </div>
