@@ -3,21 +3,22 @@ import { NextResponse } from "next/server";
 type ContactPayload = {
   fullName: string;
   email: string;
+  whatsapp: string;
   interest: string;
   message: string;
+  source?: string;
 };
 
 export async function POST(request: Request) {
   try {
     const body: ContactPayload = await request.json();
-    const { fullName, email, interest, message } = body;
+    const { fullName, email, whatsapp, interest, message, source } = body;
 
-    if (!fullName || !email || !interest || !message) {
+    if (!fullName || !email || !whatsapp || !interest || !message) {
       return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
     }
 
-    // TODO: replace with database insert (e.g. Prisma, Supabase, etc.)
-    console.log("New contact submission:", { fullName, email, interest, message });
+    console.log("New contact submission:", { fullName, email, whatsapp, interest, message, source });
 
     return NextResponse.json({ success: true });
   } catch (err) {

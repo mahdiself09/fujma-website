@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ArrowRight, CheckCircle } from "lucide-react";
+import { supabase } from "@/lib/supabase";
 
 const INTEREST_OPTIONS = [
   "Product Sourcing",
@@ -15,6 +16,7 @@ const INTEREST_OPTIONS = [
 type FormData = {
   fullName: string;
   email: string;
+  whatsapp: string;
   interest: string;
   message: string;
 };
@@ -22,6 +24,7 @@ type FormData = {
 const INITIAL: FormData = {
   fullName: "",
   email: "",
+  whatsapp: "",
   interest: "",
   message: "",
 };
@@ -30,9 +33,10 @@ interface ContactFormProps {
   title?: string;
   subtitle?: string;
   compact?: boolean;
+  source?: string;
 }
 
-export default function ContactForm({ title, subtitle, compact = false }: ContactFormProps) {
+export default function ContactForm({ title, subtitle, compact = false, source = "unknown" }: ContactFormProps) {
   const [formData, setFormData] = useState<FormData>(INITIAL);
   const [errors, setErrors] = useState<Partial<FormData>>({});
   const [submitting, setSubmitting] = useState(false);
@@ -45,6 +49,7 @@ export default function ContactForm({ title, subtitle, compact = false }: Contac
     if (!formData.email.trim()) e.email = "Email is required.";
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
       e.email = "Enter a valid email address.";
+    if (!formData.whatsapp.trim()) e.whatsapp = "WhatsApp number is required.";
     if (!formData.interest) e.interest = "Please select a service.";
     if (!formData.message.trim()) e.message = "Message is required.";
     return e;
@@ -72,10 +77,59 @@ export default function ContactForm({ title, subtitle, compact = false }: Contac
     setSubmitError(null);
 
     try {
+      const payload = {
+        fullName: formData.fullName,
+        email: formData.email,
+        whatsapp: formData.whatsapp,
+        interest: formData.interest,
+        message: formData.message,
+        source,
+      };
+
+      // 1. Save to Supabase
+      try {
+        const { error } = await supabase.from("contacts").insert([{
+          full_name: payload.fullName,
+          email: payload.email,
+          whatsapp: payload.whatsapp,
+          interest: payload.interest,
+          message: payload.message,
+          source: payload.source,
+        }]);
+        if (error) console.error("❌ Supabase error:", error);
+        else console.log("✅ Saved to Supabase");
+      } catch (err) {
+        console.error("❌ Supabase error:", err);
+      }
+
+      // 2. Send Telegram notification via Edge Function
+      try {
+        const tgRes = await fetch(
+          "https://yskiekkxqocyqsdtvpfs.functions.supabase.co/send-telegram",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              full_name: payload.fullName,
+              email: payload.email,
+              whatsapp: payload.whatsapp,
+              interest: payload.interest,
+              message: payload.message,
+            }),
+          }
+        );
+        const tgData = await tgRes.json();
+        if (!tgRes.ok) console.error("❌ Telegram error:", tgData);
+        else console.log("✅ Telegram notification sent");
+      } catch (err) {
+        console.error("❌ Telegram error:", err);
+      }
+
+      // Also send to internal API (email via Resend)
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(payload),
       });
 
       if (!res.ok) {
@@ -190,6 +244,24 @@ export default function ContactForm({ title, subtitle, compact = false }: Contac
         />
         {errors.email && (
           <p className="mt-1.5 text-xs text-red-500">{errors.email}</p>
+        )}
+      </div>
+
+      {/* WhatsApp */}
+      <div>
+        <label className="block text-[13px] font-semibold text-foreground mb-2">
+          WhatsApp Number {!compact && <span className="text-royal">*</span>}
+        </label>
+        <input
+          type="tel"
+          name="whatsapp"
+          value={formData.whatsapp}
+          onChange={handleChange}
+          placeholder="+971 50 000 0000"
+          className={`${inputBase} ${errors.whatsapp ? inputError : inputIdle}`}
+        />
+        {errors.whatsapp && (
+          <p className="mt-1.5 text-xs text-red-500">{errors.whatsapp}</p>
         )}
       </div>
 

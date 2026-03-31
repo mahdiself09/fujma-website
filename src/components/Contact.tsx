@@ -61,7 +61,7 @@ export default function Contact() {
           </div>
 
           {/* Right — Reusable form */}
-          <ContactForm />
+          <ContactForm source="homepage" />
         </div>
       </div>
     </section>
